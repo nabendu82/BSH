@@ -1,34 +1,44 @@
 import './App.css';
-import DemoForm from './components/DemoForm';
-// import ListPost from './components/ListPost';
-// import UserGreeting from './components/UserGreeting';
-// import ParentComponent from './components/ParentComponent';
-// import EventBind from './components/EventBind';
-// import Counter from './components/Counter';
-// import Hello from './components/Hello';
-// import { Greet, ReactGreet } from './components/Greet';
-// import Greeting from './components/Greeting';
-// import Welcome from './components/Welcome';
+import PostForm from './components/PostForm';
+// import PostList from './components/PostList';
+// import GrandParent from './components/GrandParent';
+// import { UserProvider } from './components/userContext';
+// import ClickCounter2 from './components/ClickCounter2';
+// import CounterRender from './components/CounterRender';
+// import HoverCounter2 from './components/HoverCounter2';
+// import ErrorBoundary from './components/ErrorBoundary';
+// import Villain from './components/Villain';
 
 function App() {
   return (
     <div className="App">
-      {/* <Greet />
-      <ReactGreet />
-      <Hello /> */}
-      {/* <Greeting name="JavaScript">Language of the Web</Greeting>
-      <Greeting name="Golang" />
-      <Greeting name="Swift">Language for iOS apps</Greeting>
-      <hr />
-      <Welcome name="Flutter">Language for cross-mobile development</Welcome>
-      <Welcome name="React Native" />
-      <Welcome name="Java"><button>Click for Java</button></Welcome> */}
-      {/* <Counter /> */}
-      {/* <EventBind /> */}
-      {/* <ParentComponent /> */}
-      {/* <UserGreeting /> */}
-      {/* <ListPost /> */}
-      <DemoForm />
+      <PostForm />
+      {/* <UserProvider value='Nabendu'>
+        <GrandParent />
+      </UserProvider> */}
+      {/* <ErrorBoundary>
+        <Villain villainName="Joker" />
+        <Villain villainName="Riddler" />
+        <Villain villainName="Batman" />
+      </ErrorBoundary> */}
+
+      {/* <CounterRender>
+        {(count, incrementCount) => (
+          <ClickCounter2 count={count} incrementCount={incrementCount} />
+        )}
+      </CounterRender>
+      <CounterRender>
+        {(count, incrementCount) => (
+          <HoverCounter2 count={count} incrementCount={incrementCount} />
+        )}
+      </CounterRender> */}
+
+      {/* <CounterRender render={(count, incrementCount) => (
+        <ClickCounter2 count={count} incrementCount={incrementCount} />
+      )}/>
+      <CounterRender render={(count, incrementCount) => (
+        <HoverCounter2 count={count} incrementCount={incrementCount} />
+      )}/> */}
     </div>
   );
 }
