@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import useEffectOnce from './useEffectOnce';
 
 const HookMouse = () => {
     const [x, setX] = useState(0);
@@ -10,15 +11,25 @@ const HookMouse = () => {
         setY(e.clientY)
     }
 
-    useEffect(() => {
+    // useEffect(() => {
+    //     console.log('Hook useEffect called');
+    //     window.addEventListener('mousemove', logMousePosition);
+
+    //     return () => {
+    //         console.log('Hook Unmounting code');
+    //         window.removeEventListener('mousemove', logMousePosition)
+    //     }
+    // }, [])
+
+    useEffectOnce(() => {
         console.log('Hook useEffect called');
         window.addEventListener('mousemove', logMousePosition);
-
+        
         return () => {
             console.log('Hook Unmounting code');
             window.removeEventListener('mousemove', logMousePosition)
         }
-    }, [])
+    })
 
     return (
         <>
