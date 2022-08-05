@@ -1,0 +1,53 @@
+.App {
+  text-align: center;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  width: 50rem;
+  margin: 0rem auto;
+  border: 0.1rem solid rgba(0, 0, 0, 0.233);
+  padding: 1rem;
+  justify-content: space-between;
+}
+.list-header {
+  display: flex;
+  align-items: center;
+}
+.list-header h2 { color: rgb(37, 36, 36)}
+.list-img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  margin-right: 0.5rem;
+}
+.list-note {
+  width: 30%;
+  text-align: left;
+}
+
+.add-people {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  margin: 5rem auto
+}
+
+.add-input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin: 0.3rem 0rem
+}
+
+.add-button {
+  padding: 0.5rem;
+  cursor: pointer;
+  background-color: darkmagenta;
+  font-weight: 700;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+}
