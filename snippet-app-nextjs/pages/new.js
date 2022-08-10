@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import SnippetForm from '../components/SnippetForm'
+import { withPageAuthRequired } from '@auth0/nextjs-auth0'
 
-const New = () => {
+export default function New(){
     return (
         <div>
             <Head>
@@ -16,4 +17,4 @@ const New = () => {
     )
 }
 
-export default New
+export const getServerSideProps = withPageAuthRequired();
